@@ -14,12 +14,23 @@ html, body {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-size: 400% 400%; 
+    color: #333;
+    height: auto;
+    position: relative;
+}
+
+.content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.gradient-background {
     background: linear-gradient(-45deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
     background-size: 400% 400%; 
     animation: gradientBG 15s ease infinite;
-    color: #333;
-    min-height: 100vh;
-    position: relative;
+    flex: 1;
 }
 
 @keyframes gradientBG {
@@ -33,6 +44,21 @@ body {
         background-position: 0% 50%;
     }
 }
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    header {
+        height: 60px;
+    }
+    
+    footer {
+        padding: 15px;
+    }
+}
+
 
 /*---------------HEADER---------------*/
 
@@ -246,7 +272,6 @@ body.no-scroll {
     transition: opacity 0.5s ease;
 }
 
-
 .modal-content {
     background-color: rgb(156, 144, 144);
     margin: 10% auto;
@@ -284,7 +309,6 @@ body.no-scroll {
     display: block;
     opacity: 1;
 }
-
 
 
 /*---------------PROJECTS---------------*/
@@ -349,6 +373,7 @@ body.no-scroll {
 
 
 /*---------------CONTACT---------------*/
+
 #contact h2 {
     text-align: center;
     margin-top: -20px;
@@ -420,10 +445,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-footer {
-    min-height: 80px;
 }
 
 footer ul {
