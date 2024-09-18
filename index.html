@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi portfolio personal">
+    <title>Portfolio - Alejo Legname</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <header>
+        <div class="logo">Alejo Legname 💻</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section about-container">
+        <div class="about-details">
+            <h2>Sobre Mí</h2>
+            <p>
+                Soy una persona honesta y responsable con ganas de emprender nuevos desafíos.
+                Me adapto rápidamente y tengo facilidad para adquirir nuevos conocimientos. Valorizo el
+                trabajo en equipo y el respeto hacia los demás.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="images/profile_pic.png" alt="Descripción de la imagen" />
+        </div>
+    </section>
+    
+    <div class="stack-images-container">
+        <img src="images/stack/python-original.png" alt="Python" class="stack-image" />
+        <img src="images/stack/django-icon.png" alt="Django" class="stack-image" />
+        <img src="images/stack/flask-horizontal.png" alt="Flask" class="stack-image" />
+        <img src="images/stack/cplusplus-original.png" alt="Cplusplus" class="stack-image" />
+        <img src="images/stack/csharp-original.png" alt="Csharp" class="stack-image" />
+        <img src="images/stack/dot-net-framework.png" alt="dotnet" class="stack-image" />
+    </div>
+    <div class="stack-images-container">
+        <img src="images/stack/mysql-original.png" alt="Mysql" class="stack-image" />
+        <img src="images/stack/mongodb-original.png" alt="Mongodb" class="stack-image" />
+        <img src="images/stack/docker-plain.png" alt="docker" class="stack-image" />
+    </div>
+
+    <section id="experience" class="section">
+        <h2>Experiencia</h2>
+        <div class="experience">
+            <div class="job-info">
+                <img src="images/jobs/nash21.jpg" alt="nash21" class="icon-left">
+                <h3>Nash 21 (Junio 2024 - Actualidad)</h3>
+            </div>
+            <p>Back End Developer</p>
+            <br>
+            <ul>
+                <li>Desarrollo y mantenimiento de aplicaciones en Python y Django.</li>
+                <li>Implementación de microservicios.</li>
+                <li>Administración de bases de datos MySQL.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <div class="job-info">
+                <img src="images/jobs/leafnoise.jpg" alt="leafnoise" class="icon-left">
+                <h3>Leafnoise (Noviembre 2022 - Junio 2024)</h3>
+            </div>
+            <p>Back End Developer</p>
+            <br>
+            <ul>
+                <li>Desarrollo y mantenimiento de aplicaciones en Python y Flask.</li>
+                <li>Ejecución de consultas complejas y recopilación de datos con MongoDB.</li>
+                <li>Code Reviews y asesoramiento.</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button id="openModal" type="button" class="btn">Proyectos</button>
+        </div>
+    </section>
+
+    <div id="Modal" class="modal-projects">
+        <div class="modal-content">
+            <span class="closeModal">&times;</span>
+            <h2>Proyectos Destacados 🚀</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="projects-git">
+                        <h4>Weather App</h4>
+                        <img src="images/projects/weather_app.png" alt="Weather App" class="project-img">
+                        <p class="project-description">Aplicacion que permite a los usuarios consultar
+                            el clima actual en cualquier ciudad</p>
+                        <div class="button-container">
+                            <a href="https://github.com/AlejoLg1/Weather-app" target="_blank">
+                                <button type="button" class="btn">Saber Más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projects-git">
+                        <h4>Object Detector</h4>
+                        <img src="images/projects/object_detector.png" alt="Object Detector" class="project-img">
+                        <p class="project-description">Proyecto que identifica y delimita varios objetos en un flujo de video en vivo.</p>
+                        <div class="button-container">
+                            <a href="https://github.com/AlejoLg1/Object-Detector" target="_blank">
+                                <button type="button" class="btn">Saber Más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projects-git">
+                        <h4>Sist. Gestión Educativa</h4>
+                        <img src="images/projects/sge.png" alt="Object Detector" class="project-img">
+                        <p class="project-description">Sistema orientado a la gestion de estudiantil mediante distintos perfiles.</p>
+                        <div class="button-container">
+                            <a href="https://github.com/AlejoLg1/SGE" target="_blank">
+                                <button type="button" class="btn">Saber Más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section id="contact" class="section">
+        <h2>Contacto</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Alejo Legname. Todos los derechos reservados.</p>
+        <ul>
+            <li>
+                <a href="https://github.com/AlejoLg1">
+                    <img src="images/social/git.png" alt="GitHub" style="width: 58px; height: 58px;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/alejo-lg/">
+                    <img src="images/social/linkedin.png" alt="LinkedIn" style="width: 60px; height: 60px;">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
